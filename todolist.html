@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="header">
+                <span>ToDoList</span>
+                <input ref="abc" type="text" placeholder="添加ToDo" v-model="con" @keyup.13="add()" v-focus>
+            </div>
+        </header>
+        <div class="title">
+            <input type="button" value="全部" @click="changeStatus('all')" :class="{checked:status=='all'}">
+            <input type="button" value="已完成" @click="changeStatus('1')" :class="{checked:status=='1'}">
+            <input type="button" value="未完成" @click="changeStatus('0')" :class="{checked:status=='0'}">
+        </div>
+        <ul class="list">
+            <li v-for="item in datas">
+                <div v-if="item.edit" @dblclick="edit(item)">
+                    <span class="opt" @click="changestate(item)" :class="{red:item.state=='1'}"></span>
+                    <p>{{item.title}}</p>
+                    <span class="del" @click="del(item.id)">删除</span>
+                </div>
+                <div v-else>
+                    <input type="text" v-model="item.title" @blur="blur(item)">
+                </div>
+            </li>
+            <div v-show="all.length==0">无数据</div>
+        </ul>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>

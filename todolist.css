@@ -1,0 +1,98 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    background: #cccccc;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background: rgba(47,47,47,0.98);
+}
+.header{
+    width: 600px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header>span{
+    font-size: 24px;
+    color:#cccccc;
+}
+.header>input[type="text"]{
+    width: 60%;
+    height: 24px;
+    text-indent: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.24), 0 1px 6px rgba(0,0,0,0.45) inset;
+    border: none;
+    outline: none;
+}
+.title{
+    width: 40%;
+    margin: 0 auto;
+}
+.list{
+    width: 610px;
+    height: auto;
+    margin: 0 auto;
+}
+.list li{
+    width: 610px;
+    height: 32px;
+    line-height: 32px;
+    background: #fff;
+    position: relative;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 0 45px;
+    border-radius: 3px;
+    border-left: 5px solid #629A9C;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+.list li .opt{
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border:1px solid #cccccc;
+    cursor:pointer;
+}
+.list li p{
+    width: 100%;
+    height: 93%;
+    border: none;
+    outline: none;
+}
+.list li .del{
+    width: 35px;
+    height: 30px;
+    background: none;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    right: 12px;
+    top:2px;
+    cursor:pointer;
+}
+.checked{
+    background: #008ed0;
+    color: #FFFFFF;
+}
+.red{
+    background: red;
+}
